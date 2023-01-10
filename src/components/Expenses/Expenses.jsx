@@ -1,11 +1,15 @@
+import { useState } from "react";
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter/ExpensesFilter";
 
 const Expenses = (props) => {
+  const [yearFiltered, setYearFiltered] = useState('');
+
   const expenseHandler = (year) => {
-    console.log(year)
+    setYearFiltered(year)
+    console.log(year);
   }
 
   return (
